@@ -1,13 +1,13 @@
 {% set name = "saqc" %}
-{% set version = "2.4.1" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}-1.tar.gz
-  sha256: 0bf18db6011e5bc54afab21911e3e9cc6897a415c70201df42d045c2452fd1c1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ffc3aaab539c778df5bfcf34f4395ac69e51654cc5386035a61ce65f96cff8a8
 
 build:
   noarch: python
