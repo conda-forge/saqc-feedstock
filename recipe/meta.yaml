@@ -1,13 +1,13 @@
 {% set name = "saqc" %}
-{% set version = "2.4.1" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}-1.tar.gz
-  sha256: 0bf18db6011e5bc54afab21911e3e9cc6897a415c70201df42d045c2452fd1c1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ffc3aaab539c778df5bfcf34f4395ac69e51654cc5386035a61ce65f96cff8a8
 
 build:
   noarch: python
@@ -18,23 +18,24 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
+    - versioneer ==0.29
   run:
-    - python >=3.8
-    - click
-    - docstring_parser
-    - dtw =1.4
-    - fancy-collections =0.2
-    - matplotlib-base =3.7
-    - numba
-    - numpy =1.24
-    - outlier-utils ==0.0.3
-    - pyarrow =11.0
-    - pandas =2.0
-    - scikit-learn =1.2
-    - scipy =1.10
-    - typing_extensions =4.5
+    - python >=3.9
+    - click =8.1.7
+    - docstring_parser 0.16
+    - fancy-collections =0.3.0
+    - fastdtw =0.3.4
+    - matplotlib-base =3.8.3
+    - numpy =1.26.4
+    - outlier-utils ==0.0.5
+    - pyarrow =15.0.2
+    - pandas =2.2.1
+    - scikit-learn =1.4.1
+    - scipy =1.12.0
+    - typing_extensions =4.10.0
+    - xorg-libx11
 
 test:
   imports:
