@@ -1,5 +1,5 @@
 {% set name = "saqc" %}
-{% set version = "2.6.0" %}
+{% set version = "2.7.0.post2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ffc3aaab539c778df5bfcf34f4395ac69e51654cc5386035a61ce65f96cff8a8
+  sha256: 7b186ae0434bf47ab8f0e06a6be0e91d0709951bf3c04e53ea67e03132b8de0a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
-  number: 1
+  number: 0
   entry_points:
     - saqc = saqc.__main__:main
 
