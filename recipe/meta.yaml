@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - pip
     - versioneer ==0.29
   run:
@@ -40,7 +40,7 @@ requirements:
     - xorg-libx11
 test:
   requires:
-    - python {{ python_min }}
+    - python >={{ python_min }}
   imports:
     - saqc
   commands:
