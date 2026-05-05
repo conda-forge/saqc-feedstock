@@ -39,6 +39,7 @@ requirements:
     - pydantic =2.11.7
     - eval-type-backport =0.2.2
     - xorg-libx11
+    - pymoo =0.6.1
 test:
   requires:
     - python >={{ python_min }}
