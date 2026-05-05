@@ -25,7 +25,7 @@ requirements:
   run:
     - python >={{ python_min }}
     - click =8.3.3
-    - docstring_parser ==0.18
+    - docstring_parser ==0.17
     - fancy-collections =0.3.0
     - fastdtw =0.3.4
     - matplotlib-base =3.10.9
