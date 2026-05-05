@@ -1,5 +1,5 @@
 {% set name = "saqc" %}
-{% set version = "2.7.0.post3" %}
+{% set version = "2.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,40 +7,42 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e37ae529ba40a939032e5f080899df13f5bf75b9acf41c44aace31e10b30fcd6
+  sha256: 2a85107913a0a3506df2bb8b59a1b24e81be86186d84d7136adbcc981c080158
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
-  number: 1
+  number: 0
   entry_points:
     - saqc = saqc.__main__:main
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python >={{ python_min }}
     - pip
+    - setuptools
     - versioneer ==0.29
   run:
     - python >={{ python_min }}
-    - click =8.2.1
+    - click =8.3.3
     - docstring_parser ==0.17
     - fancy-collections =0.3.0
     - fastdtw =0.3.4
-    - matplotlib-base =3.10.6
+    - matplotlib-base =3.10.9
     - numpy =2.2.6
     - outlier-utils ==0.0.5
-    - pyarrow =21.0.0
-    - pandas =2.3.2
-    - scikit-learn =1.7.1
+    - pymoo =0.6.1
+    - pyarrow =24.0.0
+    - pandas =3.0.2
+    - scikit-learn =1.8.0
     - scipy =1.14.1
     - typing_extensions =4.15.0
-    - pydantic =2.11.7
-    - eval-type-backport =0.2.2
+    - pydantic =2.13.3
+    - eval-type-backport =0.3.1
     - xorg-libx11
 test:
   requires:
-    - python {{ python_min }}
+    - python >={{ python_min }}
   imports:
     - saqc
   commands:
