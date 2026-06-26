@@ -1,5 +1,6 @@
 {% set name = "saqc" %}
 {% set version = "2.9.0" %}
+{% set PYTHON = PYTHON | default("$PYTHON") %}
 
 package:
   name: {{ name|lower }}
