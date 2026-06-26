@@ -1,6 +1,6 @@
 {% set name = "saqc" %}
 {% set version = "2.9.0" %}
-{% set PYTHON = PYTHON | default("$PYTHON") %}
+{% set python_min = "3.13" %}
 
 package:
   name: {{ name|lower }}
@@ -43,7 +43,7 @@ requirements:
     - xorg-libx11
 test:
   requires:
-    - python ={{ python_min }}.*
+    - python ={{ python_min }}
   imports:
     - saqc
   commands:
