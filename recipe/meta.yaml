@@ -41,7 +41,7 @@ requirements:
     - pydantic =2.13.3
     - eval-type-backport =0.3.1
     - xorg-libx11
-    - pywt
+    - pywavelets
 test:
   requires:
     - python ={{ python_min }}
