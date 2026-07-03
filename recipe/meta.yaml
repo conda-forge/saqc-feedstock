@@ -1,5 +1,5 @@
 {% set name = "saqc" %}
-{% set version = "2.9.0" %}
+{% set version = "2.9.1" %}
 {% set python_min = "3.13" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 90c91cd6f8bfe829c5913703d5d91c85a5b4e1eed9452b333cac55b6d010ff2d
+  sha256: 3f22b6e66cc9b12dfbb69bafb5ba1ad0bb365aea794c8249bba12b2ccd2a143c
 
 build:
   noarch: python
