@@ -1,5 +1,5 @@
 {% set name = "saqc" %}
-{% set version = "2.9.1" %}
+{% set version = "2.10.0" %}
 {% set python_min = "3.13" %}
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3f22b6e66cc9b12dfbb69bafb5ba1ad0bb365aea794c8249bba12b2ccd2a143c
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 837a86a35fd941c37496be98304e9e46d384fc86d1f5c9f3fbeddf52dc98c8c3
 
 build:
   noarch: python
